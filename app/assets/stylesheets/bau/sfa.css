@@ -54,10 +54,10 @@
 .buttonLink {
     color: #005ea5;
     background:none!important;
-    border:none; 
+    border:none;
     padding:0!important;
     /*border is optional*/
-    border-bottom:1px solid #444; 
+    border-bottom:1px solid #444;
 }
 
 /**fix for external rel with font-xsmall**/
@@ -85,7 +85,7 @@
 
 @media (max-width: 641px) {
     .govuk-box-border-yellow-delete {padding: 0 1em 0.2em;}
-    
+
 }
 
 .account-info {
@@ -228,7 +228,7 @@ button.search {
 /*search filters reset*/
 .buttonlink {
      background:none;
-     border:none; 
+     border:none;
      padding:0;
      color:#005ea5;
      text-decoration:underline;
@@ -236,7 +236,7 @@ button.search {
 }
 
 #course-search, .course-search {
-    float: left;    
+    float: left;
     width:76%;
     width: calc(100% - 62px);
     height: 38px;
@@ -549,7 +549,7 @@ ul.job-family {
     color: #fff;
 }
 
-#az-index {    
+#az-index {
     margin: 0;
     padding: 0;
     display: inline;
@@ -565,11 +565,11 @@ ul#az-index li {
 }
 
 #az-index a:link, #az-index a:visited {
-    background: #dee0e2;    
+    background: #dee0e2;
     display: block;
     height: 25px;
     padding: 0.65em 0 0 0;
-    text-align: center;    
+    text-align: center;
     width: 40px;
     line-height: 15px;
 }
@@ -586,7 +586,7 @@ ul#az-index li {
     outline: 3px solid #ffbf47;
 }
 
-.filter .legend {    
+.filter .legend {
     font-size: 19px;
     line-height: 1.31579;
     font-weight: 400;
@@ -622,7 +622,7 @@ ul#az-index li {
     float: left;
     width: 100%;
     background-color: #dee0e2;
-    padding: 5px;    
+    padding: 5px;
 }
 
 .js-enabled .checkbox-filter .head {
@@ -673,7 +673,7 @@ ul#az-index li {
 }
 
 .js-enabled .checkbox-filter .head .controls {
-    float: right;    
+    float: right;
     display: inline-block;
 }
 
@@ -743,7 +743,7 @@ ul#az-index li {
 }
 
 @media (min-width:1020px) {
-    .govuk-box-grey {        
+    .govuk-box-grey {
         border-bottom: 1px solid #fff;
     }
 
@@ -783,8 +783,8 @@ ul#az-index li {
   width: 100%;
   background-color: #ffbf47;
   padding-top: 10px;
-  padding-bottom: 10px; 
-  
+  padding-bottom: 10px;
+
 }
 
 .ipsos a {
@@ -805,8 +805,8 @@ ul#az-index li {
 }
 
 @media (min-width: 1020px) {
-  .ipsos p {   
-    margin: 0 auto;    
+  .ipsos p {
+    margin: 0 auto;
   }
 }
 
@@ -824,7 +824,7 @@ ul#az-index li {
 
 input[type="search"] {
     -webkit-appearance: none;
-    border-radius: 0;    
+    border-radius: 0;
 }
 
 /**search box error**/
