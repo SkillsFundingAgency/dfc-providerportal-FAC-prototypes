@@ -1,0 +1,338 @@
+{% extends "layout_ncs_sprint13.html" %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block pageTitle %}
+Careers advice - job profiles, information and resources | National Careers Service
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+</div>
+<header class="homepage-top">
+  <div class="ec-hero">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-xl">Find a course</h1>
+          <p class="govuk-body-lead">Use our course search to look for different types of learning opportunities including classroom, work based and online learning. All learning providers are contracted with the Education and Skills Funding Agency (ESFA) and include colleges, training
+            providers and local councils.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs ">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="homepage-LMI">Home</a> </li>
+        <li class="govuk-breadcrumbs__list-item">Explore careers</li>
+      </ol>
+    </div>
+  </div>
+-->
+</header>
+  <div class="govuk-width-container">
+{% endblock %}
+
+{% block content %}
+
+  <!--h1 class="govuk-heading-xl">Search</h1-->
+
+  <form action="javascript:preventDefault();" method="get" novalidate="novalidate">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="account-number">
+              Course name
+            </label>
+          </h1>
+          <div id="account-number-hint" class="govuk-hint">
+            For example, maths or sports studies
+          </div>
+          <input class="govuk-input" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="filters">
+
+          <div class="filters-container">
+            <div class="filter-label">
+              <h2 class="govuk-heading-s govuk-!-margin-0">Filters</h2>
+            </div>
+            <div class="filter-box">
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="location">Location</label>
+                <input class="govuk-input" id="location" name="location" type="text" value="">
+              </div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="provider">Course provider</label>
+                <input class="govuk-input" id="provider" name="provider" type="text" value="">
+              </div>
+
+              <fieldset class="govuk-fieldset govuk-!-margin-bottom-4">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <p class="govuk-fieldset__heading ">
+                    Course hours
+                  </p>
+                </legend>
+                <div class="govuk-radios govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours" name="course-hours" type="radio" value="All">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours">
+                      All
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-2" name="course-hours" type="radio" value="Full time">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-2">
+                      Full time
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-3" name="course-hours" type="radio" value="Part time">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-3">
+                      Part time
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-4" name="course-hours" type="radio" value="Flexible">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-4">
+                      Flexible
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="govuk-fieldset govuk-!-margin-bottom-4">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <p class="govuk-fieldset__heading ">
+                    Course type
+                  </p>
+                </legend>
+                <div class="govuk-radios govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours" name="course-hours" type="radio" value="All">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours">
+                      All
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-2" name="course-hours" type="radio" value="Classroom based">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-2">
+                      Classroom based
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-3" name="course-hours" type="radio" value="Online">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-3">
+                      Online
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-4" name="course-hours" type="radio" value="Work based">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-4">
+                      Work based
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="govuk-fieldset govuk-!-margin-bottom-6">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <p class="govuk-fieldset__heading">
+                    Start date
+                  </p>
+                </legend>
+                <div class="govuk-radios govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours" name="course-hours" type="radio" value="Anytime">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours">
+                      Anytime
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-2" name="course-hours" type="radio" value="From today">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-2">
+                      From today
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="course-hours-3" name="course-hours" type="radio" value="Enter a date">
+                    <label class="govuk-label govuk-radios__label govuk-radios__label--filter" for="course-hours-3">
+                      Enter a date
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <button class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
+                Apply filters
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-body">78,015 results</p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body-s govuk-!-margin-bottom-2">
+          Sort by: <span class="govuk-!-font-weight-bold">Relevance</span>, <a class="govuk-link" href="javascript:preventDefault();">Start date</a>, <a class="govuk-link" href="javascript:preventDefault();">Distance</a>
+        </p>
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="course-details">Certificate in Supporting Teaching and Learning in Schools</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> St Helens College</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Water St</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Award in Education and Training</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Diploma in Childcare and Education (Early Years Educator)</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">GCE A Level in English Literature A</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Advanced GCE in Computer Science</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">National Extended Diploma in Creative Digital Media Production – General pathway</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Certificate in Digital Applications</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Extended Diploma in IT (Software and Games Developer) with CISCO Internet of Everything and CISCO Cyber Security</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Extended Diploma in Construction and the Built Environment (QCF)</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Diploma in Construction and the Built Environment (QCF)</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link" href="javascript:preventDefault();">Architecture, Civil Engineering & Surveying BTEC Extended Diploma</a>
+          </h2>
+          <ul class="govuk-list">
+            <li class="govuk-!-margin-top-3"> <span class="govuk-secondary-colour">Provider:</span> MID-KENT COLLEGE</li>
+            <li> <span class="govuk-secondary-colour">Location:</span> Maidstone Campus</li>
+            <li> <span class="govuk-secondary-colour">Start date:</span> 01 September 2021</li>
+          </ul>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--visible">
+
+        <ul class="previous-next-navigation govuk-!-margin-top-3">
+          <li class="next"> <a href="javascript:preventDefault();"> <span class="pagination-label">Next</span> <span class="govuk-visually-hidden">page</span> <span class="page-numbers">2 of 3901</span> </a> </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </form>
+
+{% endblock %}
